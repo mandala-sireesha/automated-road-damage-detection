@@ -1,0 +1,42 @@
+{% extends 'users/userbase.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .result {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Training Results</h1>
+
+    <div class="result">
+        <h2>loss:</h2>
+        <p>Loss: {{ loss }}</p>
+    </div>
+
+    <div class="result">
+        <h2>Validation accuracy:</h2>
+        <p>val_acc: {{ val_accuracy }}</p>
+    </div>
+
+    <div class="result">
+        <h2>accuracy:</h2>
+        <p>accuracy: {{ accuracy }}</p>
+    </div>
+
+</body>
+</html>
+{% endblock %}

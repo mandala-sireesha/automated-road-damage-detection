@@ -1,0 +1,47 @@
+{%extends 'users/userbase.html'%}
+{%load static%}
+{%block content %}
+<br>
+<br>
+<br>
+<br>
+<div class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <center><i><img src="{%static 'img/prakash.jpg'%}" alt="#"/ height=100px width=100px></i></center>
+                    <hr><center><h2>Upload an Image</h2></center></hr>
+                    <span>
+                         <form action="{%url 'PredictRoadDamage'%}" method="post" enctype="multipart/form-data">
+                             <center>
+                        {%csrf_token%}
+                                 <table>
+                                     <tr>
+                                         <td>Select a Road image:</td>
+                                         <td> <input type="file" id="contact_subject" name="file" class="form-control"  placeholder="Select an Image" required/></td>
+                                     </tr>
+                                     <tr>
+                                         <td></td>
+                                         <td><button type="submit" id="contact_subject" name="Submit" class="btn-get-started scrollto">
+                                Submit
+                            </button></td>
+                                     </tr>
+                                 </table>
+
+                    </center>
+                    </form>
+                        </p>
+                        <!--<a href="#about" class="btn-get-started scrollto">Get Started</a>-->
+                    <pre>
+               <center><h2>Result is <font color="RED">{{result}}</font></h2></center>
+                <center><img src="{{path}}" width="450" height="380"></center>
+            </pre>
+                   </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{%endblock%}
